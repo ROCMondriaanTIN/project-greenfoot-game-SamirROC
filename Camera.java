@@ -1,4 +1,3 @@
-
 import greenfoot.*;
 
 /**
@@ -31,7 +30,6 @@ public class Camera extends Actor {
     public Camera(TileEngine tileEngine) {
         this.width = TileEngine.SCREEN_WIDTH;
         this.height = TileEngine.SCREEN_HEIGHT;
-        this.setLocation(0, 0);
         this.maxX = TileEngine.MAP_WIDTH * TileEngine.TILE_WIDTH - this.width;
         this.maxY = TileEngine.MAP_HEIGHT * TileEngine.TILE_HEIGHT - this.height;
         this.tileEngine = tileEngine;
@@ -62,6 +60,13 @@ public class Camera extends Actor {
         this.follow = true;
         mover.setCamera(this);
         this.followActor = mover;
+        int x = this.followActor.getX() - this.width / 2;
+        int y = this.followActor.getY() - this.height / 2;
+
+        x = Math.max(0, Math.min(x, this.maxX));
+        y = Math.max(0, Math.min(y, this.maxY));
+
+        this.setLocation(x, y);
     }
 
     @Override
