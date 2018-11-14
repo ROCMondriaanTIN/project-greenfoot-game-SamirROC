@@ -1,6 +1,6 @@
 #Greenfoot properties
-#Tue Nov 13 12:38:54 CET 2018
-editor.fx.0.height=680
+#Wed Nov 14 08:59:54 CET 2018
+editor.fx.0.height=739
 target2.width=80
 target8.name=MyWorld
 dependency12.type=UsesDependency
@@ -72,8 +72,8 @@ dependency7.type=UsesDependency
 class.Tile.superclass=greenfoot.Actor
 dependency21.from=MyWorld
 version=3.0.0
-editor.fx.0.y=241
-editor.fx.0.x=394
+editor.fx.0.y=100
+editor.fx.0.x=552
 dependency15.from=CollisionEngine
 dependency6.to=CollisionEngine
 target2.showInterface=false
@@ -94,7 +94,7 @@ target6.name=TileEngine
 target9.height=50
 dependency23.to=Tile
 dependency10.type=UsesDependency
-editor.fx.0.width=1315
+editor.fx.0.width=816
 dependency20.type=UsesDependency
 target10.y=0
 target10.x=0
