@@ -71,20 +71,20 @@ public class Hero extends Mover {
         } else {
             isOnGround = false;
         }
-        if (Greenfoot.isKeyDown("w")) {
+        if (Greenfoot.isKeyDown("space")) {
 
             if (isOnGround) {
-                velocityY = -12;
+                velocityY = -13;
                 animationJump(getWidth(), getHeight(), 1);
             }
 
         }
 
         if (Greenfoot.isKeyDown("a")) {
-            velocityX = -10;
+            velocityX = -7;
             animationWalk(getWidth(), getHeight(), 1, false);
         } else if (Greenfoot.isKeyDown("d")) {
-            velocityX = 10;
+            velocityX = 7;
             animationWalk(getWidth(), getHeight(), 1, true);
         } else {
             animationStand(getWidth(), getHeight(), 1);
