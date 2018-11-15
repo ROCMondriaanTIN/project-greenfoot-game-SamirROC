@@ -13,6 +13,7 @@ public class Hero extends Mover {
     private int walkStatus;
     private int width;
     int status = 0;
+    private String direction = "right";
     private GreenfootImage walk1w = new GreenfootImage("p1_walk1.png");
     private GreenfootImage walk2w = new GreenfootImage("p1_walk2.png");
     private GreenfootImage walk3w = new GreenfootImage("p1_walk3.png");
@@ -47,7 +48,7 @@ public class Hero extends Mover {
 
         for (Actor enemy : getIntersectingObjects(Enemy.class)) {
             if (enemy != null) {
-                getWorld().removeObject(this);
+                setLocation(960, 1400);
                 break;
             }
         }
@@ -82,9 +83,11 @@ public class Hero extends Mover {
 
         if (Greenfoot.isKeyDown("a")) {
             velocityX = -7;
+            direction = "left";
             animationWalk(getWidth(), getHeight(), 1, false);
         } else if (Greenfoot.isKeyDown("d")) {
             velocityX = 7;
+            direction = "right";
             animationWalk(getWidth(), getHeight(), 1, true);
         } else {
             animationStand(getWidth(), getHeight(), 1);
@@ -105,13 +108,7 @@ public class Hero extends Mover {
             }else{
                 setImage("p" + player + "_jump.png");
             }
-            if (right){
-                right = false;
-                
-            }else if (!right){
-                right = true;
-                getImage().mirrorHorizontally();
-            }
+            mirror();
             walkStatus++;
             status = 0;
         } else {
@@ -125,6 +122,7 @@ public class Hero extends Mover {
 
  public void animationJump(int width, int heigth, int player) {
         setImage("p" + player + "_jump.png");
+        mirror ();
         getImage().scale(width, heigth);
     }
 
@@ -136,9 +134,16 @@ public class Hero extends Mover {
         }else{
             setImage("p" + player + "_jump.png");
         }
+        mirror ();
         getImage().scale(width, heigth);
     }
-
+public void mirror() {
+    if (direction.equals("left")) {
+        
+      getImage().mirrorHorizontally();
+      
+    }
+}
 
  private double posToNeg(double x) {
         return (x - (x * 2));
