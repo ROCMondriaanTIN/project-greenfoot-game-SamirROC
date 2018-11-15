@@ -26,6 +26,7 @@ public class Hero extends Mover {
     private GreenfootImage walk10w = new GreenfootImage("p1_walk10.png");
     private GreenfootImage walk11w = new GreenfootImage("p1_walk11.png");
 
+
     public Hero() {
         super();
         gravity = 9.8;
