@@ -21,6 +21,7 @@ public class Enemy extends Mover {
         firstAct = true;
         speed = 1;
     }
+    
 
     
     
