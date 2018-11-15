@@ -68,7 +68,7 @@ public class MyWorld extends World {
         addObject(camera, 0, 0);
         addObject(hero, 960, 1550);
         addObject(new Enemy(), 452, 1417);
-        addObject(new Checkpoint(), 452, 1580);
+        addObject(new Checkpoint(), 295, 505);
         camera.act();
         
         
