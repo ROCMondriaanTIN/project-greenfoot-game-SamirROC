@@ -12,7 +12,6 @@ public class Mover extends Actor {
     public double velocityX;
     public double velocityY;
     protected Camera camera;
-
     private int worldX;
     private int worldY;
     private boolean firstLocation = true;
@@ -28,6 +27,20 @@ public class Mover extends Actor {
         hasCamera = true;
     }
 
+     public boolean atWorldEdge()
+    {
+        if(getX() < 0) {
+            setLocation(0, getY());
+            return true;
+        }
+        if(getX() > TileEngine.MAP_WIDTH * TileEngine.TILE_WIDTH){
+            setLocation(TileEngine.MAP_WIDTH * TileEngine.TILE_WIDTH -1, getY());
+            return true;
+        }
+        else
+            return false;
+    }
+   
     /**
      * Removes the camera if a camera has been set
      */
@@ -37,7 +50,7 @@ public class Mover extends Actor {
             hasCamera = false;
         }
     }
-
+   
     /**
      * Apply change in position based on velocityX and velocityY
      */
