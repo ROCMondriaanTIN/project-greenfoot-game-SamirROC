@@ -67,7 +67,7 @@ public class MyWorld extends World {
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 0, 0);
         addObject(hero, 960, 1400);
-        addObject(new Enemy(), 1170, 410);
+        addObject(new Enemy(), 452, 1417);
         camera.act();
         
         
