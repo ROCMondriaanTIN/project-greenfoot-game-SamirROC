@@ -52,6 +52,12 @@ public class Hero extends Mover {
                 break;
             }
         }
+        for (Actor checkpoint : getIntersectingObjects(Checkpoint.class)) {
+            if (checkpoint != null) {
+                checkpoint.setImage("flagBlue.png");
+                break;
+            }
+        }
     }
 
     public void handleInput() {
