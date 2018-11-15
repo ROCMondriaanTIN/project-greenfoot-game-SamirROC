@@ -15,12 +15,16 @@ public class Enemy extends Mover {
 
     public Enemy() {
         super();
-        setImage("pokerMad.png");
+        setImage("blockerMad.png");
         getImage().mirrorHorizontally();
         walkRange = 140;
         firstAct = true;
         speed = 1;
     }
+
+    
+    
+  
 
     @Override
     public void act() {
