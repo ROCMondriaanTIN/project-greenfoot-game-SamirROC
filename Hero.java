@@ -38,6 +38,7 @@ public class Hero extends Mover {
 
     @Override
     public void act() {
+        atWorldEdge();
         handleInput();
         
         velocityX *= drag;
@@ -61,6 +62,8 @@ public class Hero extends Mover {
         }
     }
 
+    
+    
     public void handleInput() {
         //on ground check and handling
 
