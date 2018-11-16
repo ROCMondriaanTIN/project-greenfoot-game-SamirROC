@@ -14,6 +14,8 @@ public class Hero extends Mover {
     private int width;
     int status = 0;
     private String direction = "right";
+    int x = 960;
+    int y = 1550;
     private GreenfootImage walk1w = new GreenfootImage("p1_walk1.png");
     private GreenfootImage walk2w = new GreenfootImage("p1_walk2.png");
     private GreenfootImage walk3w = new GreenfootImage("p1_walk3.png");
@@ -33,7 +35,7 @@ public class Hero extends Mover {
         acc = 0.6;
         drag = 0.8;
         setImage("p1_front.png");
-    
+        setLocation(960, 1550);
     }
 
     @Override
@@ -50,16 +52,19 @@ public class Hero extends Mover {
 
         for (Actor enemy : getIntersectingObjects(Enemy.class)) {
             if (enemy != null) {
-                setLocation(960, 1400);
+                setLocation(x, y);
                 break;
             }
         }
         for (Actor checkpoint : getIntersectingObjects(Checkpoint.class)) {
             if (checkpoint != null) {
                 checkpoint.setImage("flagBlue.png");
+                x = checkpoint.getX();
+                y = checkpoint.getY();
                 break;
             }
         }
+     
     }
 
     
