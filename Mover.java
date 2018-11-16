@@ -34,7 +34,7 @@ public class Mover extends Actor {
             return true;
         }
         if(getX() > TileEngine.MAP_WIDTH * TileEngine.TILE_WIDTH){
-            setLocation(TileEngine.MAP_WIDTH * TileEngine.TILE_WIDTH -1, getY());
+            setLocation(TileEngine.MAP_WIDTH * TileEngine.TILE_WIDTH, getY());
             return true;
         }
         else
