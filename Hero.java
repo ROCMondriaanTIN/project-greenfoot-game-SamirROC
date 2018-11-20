@@ -54,6 +54,7 @@ public class Hero extends Mover {
             if (enemy != null) {
                 setLocation(x, y);
                 break;
+                
             }
         }
         for (Actor checkpoint : getIntersectingObjects(Checkpoint.class)) {
