@@ -6,10 +6,7 @@ public class AI  extends Mover {
     
     public AI()
     {
-    }
-
-    public void moveAround()
-    {
-        move(1);
+        setImage("flyFly1.png");
+        velocityY = -1;
     }
 }
