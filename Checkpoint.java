@@ -7,9 +7,11 @@ import greenfoot.*;
  * @version (a version number or a date)
  */
 public class Checkpoint extends Mover {    
-        public GreenfootImage wave1w = new GreenfootImage("flagBlue.png");
+    
+    public GreenfootImage wave1w = new GreenfootImage("flagBlue.png");
     public GreenfootImage wave2w = new GreenfootImage("flagBlue2.png");
     public GreenfootImage waveSad = new GreenfootImage("flagBlueHanging.png");  
+    
     public Checkpoint() {
         setImage (waveSad);
 }
