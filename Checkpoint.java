@@ -1,11 +1,4 @@
 import greenfoot.*;
-/**
- *
- * Write a description of class Checkpoint here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Checkpoint extends Mover {    
     
     public GreenfootImage wave1w = new GreenfootImage("flagBlue.png");

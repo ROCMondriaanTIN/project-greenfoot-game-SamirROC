@@ -3,13 +3,13 @@ public class AI  extends Mover {
     
     private int x;
     private int y;
-
+    
     public AI()
     {
     }
 
-    public int sampleMethod(int y)
+    public void moveAround()
     {
-        return x + y;
+        move(1);
     }
 }
