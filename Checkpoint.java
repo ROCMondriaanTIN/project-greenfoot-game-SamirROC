@@ -9,14 +9,15 @@ public class Checkpoint extends Mover {
         setImage (waveSad);
 }
     public void flagMove () {
-    if (getImage().equals(wave1w)) 
-     {  
-       setImage (wave2w);  
-     }
-     else 
-     {  
-       setImage (wave1w);   
-     }
+    if (!getImage().equals(waveSad)){
+    if (getImage().equals(wave1w)) {
+        setImage (wave2w);
+    }
+    else 
+    {
+        setImage (wave1w);
+    }
+}
 }
     public void act() {
         applyVelocity();
