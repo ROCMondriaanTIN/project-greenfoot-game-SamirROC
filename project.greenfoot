@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Thu Nov 22 08:43:12 CET 2018
+#Thu Nov 22 12:04:54 CET 2018
 target2.width=80
 editor.fx.0.height=739
 target8.name=TileEngine
@@ -84,8 +84,8 @@ dependency27.to=Checkpoint
 dependency21.from=CollisionEngine
 target11.type=ClassTarget
 version=3.0.0
-editor.fx.0.y=71
-editor.fx.0.x=535
+editor.fx.0.y=100
+editor.fx.0.x=552
 dependency15.from=Camera
 dependency6.to=Enemy
 target2.showInterface=false
