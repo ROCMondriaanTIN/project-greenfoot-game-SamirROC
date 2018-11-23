@@ -1,12 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Overlay extends Actor
 {
+    Lifes[] lives = new Lifes[3];
     
     public Overlay(){
-        getWorld().addObject( new Lifes(),960, 1550);
+        for (int i = 0 ; i < lives.length; i++){
+            lives[i] = new Lifes();
+        }
     }
+    
     public void act() 
     {
-        // Add your action code here.
+        if (isTouching(Enemy.class)){
+            getWorld().removeObject(lives[0]);
+        }
+        for(int i = 0 ; i < lives.length; i++) {
+            getWorld().addObject (new Lifes(), 40 + 60 * i,40);
+        }
     }    
 }
