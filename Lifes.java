@@ -8,9 +8,6 @@ public class Lifes extends Actor {
     }
     public void act() 
     {
-   if (isTouching(Enemy.class)){
-    lifes--;
-}
     if (lifes == 0)
     {
         Greenfoot.stop();

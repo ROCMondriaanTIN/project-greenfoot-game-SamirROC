@@ -65,10 +65,11 @@ public class Hero extends Mover {
                 break;
             }
         }
-     
     }
-
     
+
+
+   
     
     public void handleInput() {
         //on ground check and handling
@@ -172,4 +173,5 @@ public void mirror() {
     public int getHeight() {
         return getImage().getHeight();
     }
+
 }
