@@ -13,6 +13,10 @@ public class Overlay extends Actor
     
     public void removeLife() {
         lifeCounter--;
+        if( lifeCounter == 0 )
+             {
+             Greenfoot.stop();
+             }
         getWorld().removeObject(lives[lifeCounter]);
-    }
+}
 }
