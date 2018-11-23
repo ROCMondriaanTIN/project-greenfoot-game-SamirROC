@@ -70,6 +70,7 @@ public class MyWorld extends World {
         addObject(new Enemy(), 452, 1417);
         addObject(new Checkpoint(), 295, 505);
         addObject(new AI(), 500, 1300);
+        addObject (new Lifes(), 40,40);
         camera.act();
         
         
