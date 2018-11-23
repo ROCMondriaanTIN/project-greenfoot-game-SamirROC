@@ -11,16 +11,11 @@ public class Lifes extends Actor {
     }
     public void act() 
     {
-      getWorld().addObject(new Lifes(),40, 40);
+      
     }
     public void countLives()
     {
-        for (Actor enemy : getIntersectingObjects(Enemy.class)) {
-            if (enemy != null) {
-                setLocation(x, y);
-                lives--;
-                break;
+      
     }
 }
-}
-}
+
