@@ -27,10 +27,11 @@ public class Hero extends Mover {
     private GreenfootImage walk9w = new GreenfootImage("p1_walk9.png");
     private GreenfootImage walk10w = new GreenfootImage("p1_walk10.png");
     private GreenfootImage walk11w = new GreenfootImage("p1_walk11.png");
+    private Overlay overlay;
 
-
-    public Hero() {
+    public Hero(Overlay overlay) {
         super();
+        this.overlay = overlay;
         gravity = 9.8;
         acc = 0.6;
         drag = 0.8;
@@ -53,6 +54,7 @@ public class Hero extends Mover {
         for (Actor enemy : getIntersectingObjects(Enemy.class)) {
             if (enemy != null) {
                 setLocation(x, y);
+                overlay.removeLife();
                 break;
                 
             }

@@ -2,17 +2,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Overlay extends Actor
 {
     Lifes[] lives = new Lifes[3];
+    public int lifeCounter = 3;
     
-    public Overlay(){
+    public Overlay(World world){
         for (int i = 0 ; i < lives.length; i++){
             lives[i] = new Lifes();
+            world.addObject(lives[i], 40 + 60 * i,40);
         }
     }
     
-    public void act() 
-    {                                                 
-        for(int i = 0 ; i < lives.length; i++) {
-            getWorld().addObject (new Lifes(), 40 + 60 * i,40);
-        }
-    }    
+    public void removeLife() {
+        lifeCounter--;
+        getWorld().removeObject(lives[lifeCounter]);
+    }
 }
