@@ -15,9 +15,9 @@ public class AI  extends Mover {
     {
         setImage(fly1f);
         velocityY = -2;
-        walkRange = 400;
+        walkRange = 800;
         firstAct = true;
-        speed = 5;
+        speed = 1;
     }
     
     public void flyMove() {
