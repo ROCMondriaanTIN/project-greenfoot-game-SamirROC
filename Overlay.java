@@ -15,7 +15,7 @@ public class Overlay extends Actor
         lifeCounter--;
         if( lifeCounter == 0 )
              {
-             Greenfoot.stop();
+             Greenfoot.setWorld(new MyWorld());
              }
         getWorld().removeObject(lives[lifeCounter]);
 }
