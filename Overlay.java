@@ -7,7 +7,7 @@ public class Overlay extends Actor
     public Overlay(World world){
         for (int i = 0 ; i < lives.length; i++){
             lives[i] = new Lifes();
-            world.addObject(lives[i], 40 + 60 * i,40);
+            world.addObject(lives[i], 40 + 60 * i,35);
         }
     }
     
