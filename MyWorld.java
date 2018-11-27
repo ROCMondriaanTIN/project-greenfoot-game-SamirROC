@@ -58,9 +58,10 @@ public class MyWorld extends World {
         // zodat de camera weet welke tiles allemaal moeten meebewegen met de camera
         Camera camera = new Camera(te);
         Overlay overlay = new Overlay(this);
+        ScoreCounter scorecounter = new ScoreCounter();
         // Declareren en initialiseren van een main karakter van het spel mijne heet Hero. Deze klasse 
         // moet de klasse Mover extenden voor de camera om te werken
-        Hero hero = new Hero(overlay);
+        Hero hero = new Hero(overlay, scorecounter);
 
         // Laat de camera een object volgen. Die moet een Mover instatie zijn of een extentie hiervan.
         camera.follow(hero);
@@ -72,6 +73,7 @@ public class MyWorld extends World {
         addObject(new Checkpoint(), 295, 505);
         addObject(new AI(), 500, 1300);
         addObject(overlay, 0, 0);
+        addObject(scorecounter, 930, 35);
         camera.act();
         
         

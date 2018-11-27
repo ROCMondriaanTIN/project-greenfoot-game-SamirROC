@@ -19,4 +19,6 @@ public class Overlay extends Actor
              }
         getWorld().removeObject(lives[lifeCounter]);
 }
+
+
 }
