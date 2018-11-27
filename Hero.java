@@ -28,8 +28,9 @@ public class Hero extends Mover {
     private GreenfootImage walk10w = new GreenfootImage("p1_walk10.png");
     private GreenfootImage walk11w = new GreenfootImage("p1_walk11.png");
     private Overlay overlay;
+    private ScoreCounter scorecounter;
 
-    public Hero(Overlay overlay) {
+    public Hero(Overlay overlay, ScoreCounter scorecounter) {
         super();
         this.overlay = overlay;
         gravity = 9.8;
@@ -37,6 +38,7 @@ public class Hero extends Mover {
         drag = 0.8;
         setImage("p1_front.png");
         setLocation(960, 1550);
+        this.scorecounter = scorecounter;
     }
 
     @Override
@@ -67,8 +69,15 @@ public class Hero extends Mover {
                 break;
             }
         }
+        for (Tile tile : getIntersectingObjects(Tile.class)) {
+            if(tile != null){ 
+             if(tile.getImage().toString().contains("coinGold")) {
+             getWorld().removeObject(tile);
+             scorecounter.addScore();
     }
-    
+}
+}
+}    
 
 
    
