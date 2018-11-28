@@ -1,7 +1,7 @@
 /**
 *
 * @author R. Springer
-* "authore2 W.Schaegen
+* @author2 W.Schaegen
 */
 public class TileFactory {
  
