@@ -860,6 +860,7 @@ public class TileFactory {
                 break;
             case 222:
                 tile = new Tile("spikes.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT, TileType.SPIKES);
+                tile.getImage().scale(60,60);
                 tile.isSolid = true;
                 break;
             case 223:
