@@ -7,7 +7,7 @@ public class AI  extends Mover {
     private int y;
     private int xMin = 500;
     private int xMax = 500;
-    private int speed;
+    private double speed;
     private int walkRange;
     private boolean firstAct;
     
@@ -17,7 +17,7 @@ public class AI  extends Mover {
         velocityY = -1;
         walkRange = 800;
         firstAct = true;
-        speed = 1;
+        speed = 1.5;
     }
     
     public void flyMove() {
