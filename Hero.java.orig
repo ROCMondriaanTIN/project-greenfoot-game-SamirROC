@@ -1,5 +1,5 @@
 import greenfoot.*;
-import java.util.List;
+
 /**
  *
  * @author R. Springer
@@ -29,13 +29,9 @@ public class Hero extends Mover {
     private GreenfootImage walk11w = new GreenfootImage("p1_walk11.png");
     private Overlay overlay;
     private ScoreCounter scorecounter;
-    private CollisionEngine collisionEngine;
-    private TileEngine tileEngine;
 
-    public Hero(Overlay overlay, ScoreCounter scorecounter, CollisionEngine collisionEngine, TileEngine tileEngine) {
+    public Hero(Overlay overlay, ScoreCounter scorecounter) {
         super();
-        this.collisionEngine = collisionEngine;
-        this.tileEngine = tileEngine;
         this.overlay = overlay;
         gravity = 9.8;
         acc = 0.6;
@@ -57,17 +53,6 @@ public class Hero extends Mover {
         }
         applyVelocity();
 
-        List<Tile> tiles = collisionEngine.getCollidingTiles(this, true);
-
-        for (Tile tile : tiles) {
-            if (tile != null) {
-                if (tile.type == TileType.SPIKES) {
-                    overlay.removeLife();
-                    setLocation(x, y);
-                    return;
-                }
-            }
-        }
         for (Actor enemy : getIntersectingObjects(Enemy.class)) {
             if (enemy != null) {
                 setLocation(x, y);
@@ -98,6 +83,7 @@ public class Hero extends Mover {
    
     
     public void handleInput() {
+<<<<<<< HEAD
         //on ground check and handling
 
         width = getImage().getWidth() / 2;
@@ -122,6 +108,10 @@ public class Hero extends Mover {
                 animationJump(getWidth(), getHeight(), 1);
             }
 
+=======
+        if (Greenfoot.isKeyDown("w")) {
+            velocityY = -20;
+>>>>>>> 4372fff5ea53a9c16ee13c8083969eac7aeee2f9
         }
 
         if (Greenfoot.isKeyDown("a")) {
