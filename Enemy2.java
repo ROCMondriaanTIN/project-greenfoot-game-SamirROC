@@ -1,12 +1,13 @@
-
-import greenfoot.*;
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- *
- * @author R. Springer
+ * Write a description of class Enemy2 here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-public class Enemy extends Mover {
-
+public class Enemy2 extends Mover
+{
     private int walkRange;
     private int xMin;
     private int xMax;
@@ -18,9 +19,9 @@ public class Enemy extends Mover {
     private int status;
     private int walkStatus = 1;
               
-     public Enemy() {
+     public Enemy2() {
         super();
-        setImage("slimeWalk1.png");
+        setImage("blockerMad.png");
         getImage().mirrorHorizontally();
         walkRange = 140;
         firstAct = true;
@@ -70,11 +71,12 @@ public class Enemy extends Mover {
 
             }
             
-         switchSlime();
+        
    }
    public void mirror(){
        if (direction.equals("right")){
        getImage().mirrorHorizontally();
     }  
 }
-}
+}    
+

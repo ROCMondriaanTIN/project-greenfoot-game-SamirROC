@@ -1,33 +1,36 @@
 import greenfoot.*;
 public class AI  extends Mover {
     
-    public GreenfootImage fly1f = new GreenfootImage("fly1g.png");
+    public GreenfootImage fly1f = new GreenfootImage("flyg1.png");
     public GreenfootImage fly2f = new GreenfootImage("flyg2.png");
     private int x;
     private int y;
     private int xMin = 500;
     private int xMax = 500;
-    private double speed;
+    private int speed;
     private int walkRange;
     private boolean firstAct;
+    private String direction = "left";
     
     public AI()
     {
         setImage(fly1f);
         velocityY = -1;
+        getImage().mirrorHorizontally();
+        fly2f.mirrorHorizontally();
         walkRange = 800;
         firstAct = true;
-        speed = 1.5;
+        speed = 3;
     }
     
     public void flyMove() {
    if (getImage().equals(fly1f)) 
      {  
-       setImage (fly2f);  
+       setImage (fly2f); 
      }
      else 
      {  
-       setImage (fly1f);   
+       setImage (fly1f); 
      }
 }
     
@@ -45,12 +48,14 @@ public class AI  extends Mover {
         if (getX() >= xMax) {
             speed *= -1;
             x = xMax;
+            fly2f.mirrorHorizontally();
+            fly1f.mirrorHorizontally();
         } else if (getX() <= xMin) {
             speed *= -1;
             x = xMin;
+            fly2f.mirrorHorizontally();
+            fly1f.mirrorHorizontally();
         }
         flyMove();
     }
 }
-
-

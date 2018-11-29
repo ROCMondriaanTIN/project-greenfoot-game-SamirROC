@@ -1,6 +1,6 @@
 import greenfoot.*;
-import java.awt.Color;
-import java.awt.Font;
+import greenfoot.Color;
+import greenfoot.Font;
 public class Lifes extends Actor { 
     public GreenfootImage life1f = new GreenfootImage("hud_heartFull.png");  
     int lifes = 3;
