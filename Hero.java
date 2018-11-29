@@ -76,6 +76,14 @@ public class Hero extends Mover {
                 
             }
         }
+        for (Actor enemy : getIntersectingObjects(Enemy2.class)) {
+            if (enemy != null) {
+                setLocation(x, y);
+                overlay.removeLife();
+                break;
+                
+            }
+        }
         for (Actor checkpoint : getIntersectingObjects(Checkpoint.class)) {
             if (checkpoint != null) {
                 checkpoint.setImage("flagBlue.png");
