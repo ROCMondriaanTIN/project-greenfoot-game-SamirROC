@@ -15,7 +15,7 @@ public class Hero extends Mover {
     int status = 0;
     private String direction = "right";
     int x = 960;
-    int y = 6800;
+    int y = 11650;
     private GreenfootImage walk1w = new GreenfootImage("p1_walk1.png");
     private GreenfootImage walk2w = new GreenfootImage("p1_walk2.png");
     private GreenfootImage walk3w = new GreenfootImage("p1_walk3.png");
@@ -41,7 +41,7 @@ public class Hero extends Mover {
         acc = 0.6;
         drag = 0.8;
         setImage("p1_front.png");
-        setLocation(960, 6800);
+        setLocation(960, 11650);
         this.scorecounter = scorecounter;
     }
 
