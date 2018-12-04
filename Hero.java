@@ -107,6 +107,22 @@ for (Tile tile : getIntersectingObjects(Tile.class)) {
     }
 }
 }
+for (Tile tile : getIntersectingObjects(Tile.class)) {
+            if(tile != null){ 
+             if(tile.getImage().toString().contains("window2")) {
+             setLocation(960, 8250);
+    }
+}
+}
+for (Tile tile : getIntersectingObjects(Tile.class)) {
+            if(tile != null){ 
+             if(tile.getImage().toString().contains("liquidLava")) {
+             overlay.removeLife();
+             setLocation(x, y);
+             return;
+    }
+}
+}
 }    
 
 
@@ -133,7 +149,7 @@ for (Tile tile : getIntersectingObjects(Tile.class)) {
         if (Greenfoot.isKeyDown("space")) {
 
             if (isOnGround) {
-                velocityY = -33;
+                velocityY = -13;
                 animationJump(getWidth(), getHeight(), 1);
             }
 
