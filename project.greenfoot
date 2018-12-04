@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Tue Dec 04 09:45:15 CET 2018
+#Tue Dec 04 11:28:45 CET 2018
 target16.name=DemoWorld
 dependency35.to=CollisionEngine
 target2.name=AI
@@ -200,9 +200,9 @@ dependency26.from=Hero
 target4.type=ClassTarget
 dependency59.to=Lifes
 dependency33.from=Camera
-editor.fx.0.y=89
+editor.fx.0.y=71
 dependency36.type=UsesDependency
-editor.fx.0.x=689
+editor.fx.0.x=1059
 dependency11.to=Mover
 target6.height=50
 editor.fx.0.width=816
