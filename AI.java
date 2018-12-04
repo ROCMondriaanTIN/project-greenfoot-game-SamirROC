@@ -15,12 +15,12 @@ public class AI  extends Mover {
     public AI()
     {
         setImage(fly1f);
-        velocityY = -1;
+        velocityY = -2;
         getImage().mirrorHorizontally();
         fly2f.mirrorHorizontally();
-        walkRange = 800;
+        walkRange = 500;
         firstAct = true;
-        speed = 3;
+        speed = 5;
     }
     
     public void flyMove() {

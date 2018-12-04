@@ -100,6 +100,13 @@ public class Hero extends Mover {
     }
 }
 }
+for (Tile tile : getIntersectingObjects(Tile.class)) {
+            if(tile != null){ 
+             if(tile.getImage().toString().contains("window")) {
+             setLocation(66, 435);
+    }
+}
+}
 }    
 
 
@@ -126,7 +133,7 @@ public class Hero extends Mover {
         if (Greenfoot.isKeyDown("space")) {
 
             if (isOnGround) {
-                velocityY = -13;
+                velocityY = -33;
                 animationJump(getWidth(), getHeight(), 1);
             }
 
