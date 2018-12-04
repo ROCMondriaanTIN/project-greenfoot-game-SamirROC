@@ -226,7 +226,6 @@ public class MyWorld extends World {
           
         };
 
-        Greenfoot.playSound("themesong.wav");
         // Declareren en initialiseren van de TileEngine klasse om de map aan de world toe te voegen
         te = new TileEngine(this, 60, 60);
         te.setTileFactory(new TileFactory());
