@@ -41,9 +41,9 @@ public class AI  extends Mover {
         applyVelocity();
         int x = getX();
         int y = getY();
-        if(getY() == 5175) {
+        if(getY() <= 5282) {
              setLocation(112, 5175);
-        }
+        }else{
         if (firstAct) {
             firstAct = false;
             xMin = x - walkRange / 2;
@@ -62,4 +62,5 @@ public class AI  extends Mover {
         }
         flyMove();
     }
+}
 }

@@ -123,6 +123,13 @@ for (Tile tile : getIntersectingObjects(Tile.class)) {
     }
 }
 }
+for (Actor enemy : getIntersectingObjects(AI.class)) {
+            if (enemy != null) {
+                setLocation(x, y);
+                break;
+                
+            }
+        }
 }    
 
 
