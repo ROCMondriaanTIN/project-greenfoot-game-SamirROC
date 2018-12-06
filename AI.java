@@ -3,8 +3,8 @@ public class AI  extends Mover {
     
     public GreenfootImage fly1f = new GreenfootImage("flyg1.png");
     public GreenfootImage fly2f = new GreenfootImage("flyg2.png");
-    private int x;
-    private int y;
+    private int x = 112;
+    private int y = 5175;
     private int xMin = 500;
     private int xMax = 500;
     private int speed;
@@ -32,7 +32,9 @@ public class AI  extends Mover {
      {  
        setImage (fly1f); 
      }
+     
 }
+
     
    public void act() {
         velocityX = speed;
@@ -55,6 +57,9 @@ public class AI  extends Mover {
             x = xMin;
             fly2f.mirrorHorizontally();
             fly1f.mirrorHorizontally();
+        }
+        if(getY() == 5175) {
+             setLocation(112, 5175);
         }
         flyMove();
     }
