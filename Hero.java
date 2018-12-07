@@ -32,6 +32,7 @@ public class Hero extends Mover {
     private CollisionEngine collisionEngine;
     private TileEngine tileEngine;
     eindscherm eindscherm = new eindscherm();
+    
     public Hero(Overlay overlay, ScoreCounter scorecounter, CollisionEngine collisionEngine, TileEngine tileEngine) {
         super();
         this.collisionEngine = collisionEngine;
@@ -127,6 +128,7 @@ for (Actor enemy : getIntersectingObjects(AI.class)) {
             if (enemy != null) {
                 getWorld().removeObject(enemy);
                 getWorld().addObject(eindscherm, 500, 300);
+                Timer.timer.started = true;
                 break;
             }
         }
