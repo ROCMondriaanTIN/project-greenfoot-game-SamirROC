@@ -5,6 +5,8 @@ public class Overlay extends Actor
     public int lifeCounter = 3;
     
     public Overlay(World world){
+        super();
+        getImage().clear();
         for (int i = 0 ; i < lives.length; i++){
             lives[i] = new Lifes();
             world.addObject(lives[i], 40 + 60 * i,35);

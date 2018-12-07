@@ -12,6 +12,8 @@ public class Timer extends Actor
     public static Timer timer = new Timer();
     
     public Timer () {
+        super();
+        getImage().clear();
     }
     
 public void act() {
