@@ -22,6 +22,7 @@ public void act() {
         getWorld().removeObject(Timer.timer);
         time = 200;
         started = false;
+        Greenfoot.stop();
         Greenfoot.setWorld(new MyWorld());
     }
 }  
