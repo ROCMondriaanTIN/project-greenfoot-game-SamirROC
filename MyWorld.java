@@ -245,14 +245,14 @@ public class MyWorld extends World {
 
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 0, 0);
-        addObject(hero, 850, 5475); //960, 11650);  
+        addObject(hero, 960, 11650);  
         addObject(new Enemy2(), 452, 11555);
         addObject(new Enemy(), 505, 10187);
         addObject(new Enemy(), 745, 10187);
         addObject(new Enemy(), 275, 10187);
         addObject(new Checkpoint(), 295, 10645);
         addObject(new Checkpoint(), 400, 7945);
-        addObject(new AI(), 500, 5500); //500, 11500);
+        addObject(new AI(), 500, 11500);
         addObject(overlay, 0, 0);
         addObject(scorecounter, 930, 35);
         camera.act();

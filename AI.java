@@ -42,8 +42,12 @@ public class AI  extends Mover {
         int x = getX();
         int y = getY();
         if(getY() <= 5282) {
+            if (getY() > 5175){
+             getImage().mirrorHorizontally();
+            }
              setLocation(112, 5175);
-        }else{
+             setImage(fly1f);
+        }else{   
         if (firstAct) {
             firstAct = false;
             xMin = x - walkRange / 2;

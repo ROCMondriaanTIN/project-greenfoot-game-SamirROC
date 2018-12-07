@@ -15,6 +15,6 @@ public class eindscherm extends Actor
      */
     public void act() 
     {
-        setImage(new GreenfootImage("U beat the queen!", 48, Color.RED , new Color(0,0,0,0)));
+        setImage(new GreenfootImage("U beat the queen and secured the treasure chest!", 48, Color.RED , new Color(0,0,0,0)));
     }    
 }
