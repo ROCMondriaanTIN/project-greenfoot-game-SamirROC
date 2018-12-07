@@ -7,7 +7,7 @@ import greenfoot.*;
  */
 public class Timer extends Actor
 {
-    private int time = 100;
+    private int time = 200;
     public boolean started = false;
     public static Timer timer = new Timer();
     
@@ -20,7 +20,7 @@ public void act() {
     getWorld().showText(""+time, 500, 35);
     if (time <= 0) {
         getWorld().removeObject(Timer.timer);
-        time = 100;
+        time = 200;
         started = false;
         Greenfoot.stop();
         Greenfoot.setWorld(new MyWorld());
